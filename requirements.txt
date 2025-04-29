@@ -1,0 +1,11 @@
+numpy
+pandas
+scikit-learn
+imblearn
+nltk
+Streamlit
+xgboost
+pickle
+string
+nltk
+nltk.download('wordnet')
