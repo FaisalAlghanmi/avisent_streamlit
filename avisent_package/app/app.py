@@ -2,8 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-import string
-from nltk.stem import WordNetLemmatizer
 
 with open('model_xgb.pkl', 'rb') as f:
     model = pickle.load(f)
@@ -13,34 +11,6 @@ with open('scaler_xgb.pkl', 'rb') as f:
 
 with open('model_NLP_newv2.pkl', 'rb') as f:
     nlp = pickle.load(f)
-
-
-def remove_punctuation(text):
-        for punctuation in string.punctuation:
-            text = text.replace(punctuation, ' ')
-        return text
-
-def lowercase (text):
-        lowercased = text.lower()
-        return lowercased
-
-def remove_numbers (text):
-        words_only = ''.join([i for i in text if not i.isdigit()])
-        return words_only
-
-def lemma(text): #play, playing, played -> play
-        lemmatizer = WordNetLemmatizer() # Instantiate lemmatizer
-        lemmatized = [lemmatizer.lemmatize(word) for word in text.split()] # Lemmatize
-        lemmatized_string = " ".join(lemmatized)
-        return lemmatized_string
-
-def clean_input(review):
-    # Clean the input
-        review = review.apply(remove_punctuation)
-        review = review.apply(lowercase)
-        review = review.apply(remove_numbers)
-        review = review.apply(lemma)
-        return review
 
 def user_input_features():
     st.sidebar.header('Input Airline Review Features')

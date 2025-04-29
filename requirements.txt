@@ -1,9 +1,4 @@
 numpy
 pandas
-scikit-learn
-imblearn
-nltk
-Streamlit
-xgboost
+streamlit
 pickle
-string
