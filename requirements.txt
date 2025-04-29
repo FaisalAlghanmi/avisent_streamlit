@@ -7,5 +7,3 @@ Streamlit
 xgboost
 pickle
 string
-nltk
-nltk.download('wordnet')
