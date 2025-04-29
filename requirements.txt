@@ -3,3 +3,4 @@ pandas
 streamlit
 xgboost
 scikit-learn
+imblearn
