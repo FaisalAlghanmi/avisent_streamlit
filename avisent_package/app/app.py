@@ -27,10 +27,10 @@ def set_background(image_path):
     )
 
 # Set the background
-set_background("Riyadh20Image%2012.jpg")
+set_background("avisent_package/app/Riyadh20Image%2012.jpg")
 
 # ✅ Display Logo
-logo = Image.open("gg-0١.png")
+logo = Image.open("avisent_package/app/logo.png")
 st.image(logo, width=200)
 
 
