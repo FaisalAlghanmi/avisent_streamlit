@@ -34,13 +34,13 @@ logo = Image.open("avisent_package/app/logo.png")
 st.image(logo, width=200)
 
 
-with open('model_xgb.pkl', 'rb') as f:
+with open('avisent_package/app/model_xgb.pkl', 'rb') as f:
     model = pickle.load(f)
 
-with open('scaler_xgb.pkl', 'rb') as f:
+with open('avisent_package/app/scaler_xgb.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
-with open('model_NLP_newv2.pkl', 'rb') as f:
+with open('avisent_package/app/model_NLP_newv2.pkl', 'rb') as f:
     nlp = pickle.load(f)
 
 
